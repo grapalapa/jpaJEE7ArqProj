@@ -29,8 +29,10 @@
 	<!-- Example configuration for a remote WildFly instance -->
 	<container qualifier="jboss" default="true">
 		<!-- By default, arquillian will use the JBOSS_HOME environment variable.  Alternatively, the configuration below can be uncommented. -->
-		<!--<configuration> -->
+		<configuration>
 		<!--<property name="jbossHome">/path/to/wildfly</property> -->
-		<!--</configuration> -->
+				<property name="javaHome">c:\sputnik\jdk1.8.0_20</property>
+				<property name="javaVmArguments">-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n</property>
+		</configuration>
 	</container>
 </arquillian>
